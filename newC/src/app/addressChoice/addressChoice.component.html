@@ -1,0 +1,14 @@
+<header class="display-flex justify-content-between position-fixed width">
+    <div [(innerHTML)]="city" routerLink="/cityChoice" [queryParams]="collectData"></div>
+    <input type="text" [(ngModel)]="searchValue" (ngModelChange)="SearchChange($event)">
+    <p (click)="Home('')">取消</p>
+</header>
+<footer *ngIf="list.length">
+    <List>
+        <ListItem [thumb]="'https://zos.alipayobjects.com/rmsportal/dNuvNrtqUztHCwM.png'" multipleLine
+            *ngFor="let item of list;trackBy:appServ.TrackByIndex" (click)="Home(item)">
+            {{item.name}}
+            <Brief>{{item.district}}-{{item.address}}</Brief>
+        </ListItem>
+    </List>
+</footer>

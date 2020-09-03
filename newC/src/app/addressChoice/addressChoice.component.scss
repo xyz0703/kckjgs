@@ -1,0 +1,15 @@
+header {
+    top: 0%;
+    z-index: 999;
+    input {
+        width: calc(100% - 160px);
+        height: 26px;
+        border: none;
+        border-radius: 15px;
+        background-color: #e5e5e5;
+        padding: 0 15px;
+    }
+}
+footer {
+    margin-top: 20px;
+}
